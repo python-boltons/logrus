@@ -24,6 +24,10 @@ binaryornot==0.4.4
     # via cookiecutter
 black==21.12b0
     # via -r requirements-dev.in
+bolton-metaman==0.1.1
+    # via
+    #   -r requirements.in
+    #   bolton-logrus
 bump2version==1.0.1
     # via -r requirements-dev.in
 certifi==2021.10.8
@@ -61,6 +65,8 @@ filelock==3.4.0
     #   tox
     #   virtualenv
 flake8==4.0.1
+    # via -r requirements-dev.in
+freezegun==1.1.0
     # via -r requirements-dev.in
 gitdb==4.0.9
     # via gitpython
@@ -153,7 +159,7 @@ pytest-cov==3.0.0
 pytest-mock==3.6.1
     # via -r requirements-dev.in
 python-dateutil==2.8.2
-    # via arrow
+    # via freezegun
 python-slugify==5.0.2
     # via cookiecutter
 pytz==2021.3
@@ -223,6 +229,8 @@ tox-pyenv==1.1.0
     # via -r requirements-dev.in
 typer==0.4.0
     # via cruft
+types-freezegun==1.1.3
+    # via -r requirements-dev.in
 typing-extensions==4.0.1
     # via
     #   astroid
