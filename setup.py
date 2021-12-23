@@ -17,7 +17,10 @@ from setuptools import find_namespace_packages, setup
 ###############################################################################
 # Configuration variables that are likely to need changing at some point.
 ###############################################################################
-DESCRIPTION = "Better logging made easy with support for structlog and the standard logging module."
+DESCRIPTION = (
+    "Better logging made easy with support for structlog and the standard"
+    " logging module."
+)
 SUPPORTED_PYTHON_VERSIONS = [
     (3, 8),
     (3, 9),

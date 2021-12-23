@@ -1,4 +1,8 @@
-"""Better logging made easy with support for structlog and the standard logging module."""
+"""logrus package
+
+Better logging made easy with support for structlog and the standard logging
+module.
+"""
 
 import logging as _logging
 
