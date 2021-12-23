@@ -1,0 +1,16 @@
+---
+version: '3.7'
+services:
+  python-boltons.logrus:
+    build:
+      args:
+        USER_ID: "${USER_ID:-1000}"
+        GROUP_ID: "${GROUP_ID:-1000}"
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/logrus:delegated
+    working_dir: /logrus
+    environment:
+      - BETTER_EXCEPTIONS
+      - CC_REPO_URL

@@ -1,0 +1,23 @@
+{
+  "template": "https://github.com/python-boltons/cc-python",
+  "commit": "15b51fa172bfc123ee06597c5360fa261619b8df",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "author": "Bryan M Bugyi",
+      "email": "bryanbugyi34@gmail.com",
+      "github_username": "bbugyi200",
+      "git_org_name": "python-boltons",
+      "git_repo_name": "logrus",
+      "package_name": "logrus",
+      "pypi_package_name": "bolton-logrus",
+      "read_the_docs_domain": "bolton-logrus",
+      "package_description": "Better logging made easy with support for structlog and the standard logging module.",
+      "package_type": "library",
+      "_template": "https://github.com/python-boltons/cc-python",
+      "package_path": "logrus",
+      "package_module": "logrus"
+    }
+  },
+  "directory": null
+}
