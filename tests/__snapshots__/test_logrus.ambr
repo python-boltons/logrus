@@ -1,0 +1,1095 @@
+# name: test_init_logging__LOGFILE[0]
+  '
+  15:45:03.585 [info     ] Logging to files.              [_core] logfiles=['<REMOVED_FOR_TESTING>']
+  15:45:03.585 [info     ] Hi there                       [struct_test_1] e=2 z=3
+  15:45:03.585 [error    ] Hi there                       [struct_test_1] e=2 z=3
+  15:45:03.585 [info     ] Hi there                       [struct_test_2] e=2 z=3
+  15:45:03.585 [error    ] Hi there                       [struct_test_2] e=2 z=3
+  15:45:03.585 [info     ] Hi there                       [struct_test_3] e=2 z=3
+  15:45:03.585 [error    ] Hi there                       [struct_test_3] e=2 z=3
+  15:45:03.585 [info     ] Hi there                       [std_test] 
+  15:45:03.585 [error    ] Hi there                       [std_test] 
+  
+  '
+---
+# name: test_init_logging__LOGFILE[0].1
+  '
+  {"event": "Logging to files.", "fargs": {"logs": ["Log(file='stderr', format='nocolor', level='INFO')", "Log(file='<REMOVED_FOR_TESTING>', format='json', level='DEBUG')"], "verbose": 0}, "function": "fake_function", "level": "info", "lineno": "123", "logfiles": ["<REMOVED_FOR_TESTING>"], "logger": "_core", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"event": "Hi there", "function": "fake_function", "level": "debug", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"event": "Hi there", "function": "fake_function", "level": "info", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"event": "Hi there", "function": "fake_function", "level": "error", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  
+  '
+---
+# name: test_init_logging__LOGFILE[0].2
+  <class 'list'> [
+    <class 'dict'> {
+      'event': 'Logging to files.',
+      'fargs': <class 'dict'> {
+        'logs': <class 'list'> [
+          "Log(file='stderr', format='nocolor', level='INFO')",
+          "Log(file='<REMOVED_FOR_TESTING>', format='json', level='DEBUG')",
+        ],
+        'verbose': 0,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logfiles': <class 'list'> [
+        '<REMOVED_FOR_TESTING>',
+      ],
+      'logger': '_core',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+  ]
+---
+# name: test_init_logging__LOGFILE[1]
+  '
+  15:45:03.585481 [info     ] Logging to files.              [_core] logfiles=['<REMOVED_FOR_TESTING>'] pid=12345 thread=MainThread
+  15:45:03.585481 [info     ] Hi there                       [struct_test_1] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [error    ] Hi there                       [struct_test_1] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [info     ] Hi there                       [struct_test_2] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [error    ] Hi there                       [struct_test_2] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [info     ] Hi there                       [struct_test_3] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [error    ] Hi there                       [struct_test_3] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [info     ] Hi there                       [std_test] pid=12345 thread=MainThread
+  15:45:03.585481 [error    ] Hi there                       [std_test] pid=12345 thread=MainThread
+  
+  '
+---
+# name: test_init_logging__LOGFILE[1].1
+  '
+  {"event": "Logging to files.", "fargs": {"logs": ["Log(file='stderr', format='nocolor', level='INFO')", "Log(file='<REMOVED_FOR_TESTING>', format='json', level='DEBUG')"], "verbose": 1}, "function": "fake_function", "level": "info", "lineno": "123", "logfiles": ["<REMOVED_FOR_TESTING>"], "logger": "_core", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"event": "Hi there", "function": "fake_function", "level": "debug", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"event": "Hi there", "function": "fake_function", "level": "info", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"event": "Hi there", "function": "fake_function", "level": "error", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  
+  '
+---
+# name: test_init_logging__LOGFILE[1].2
+  <class 'list'> [
+    <class 'dict'> {
+      'event': 'Logging to files.',
+      'fargs': <class 'dict'> {
+        'logs': <class 'list'> [
+          "Log(file='stderr', format='nocolor', level='INFO')",
+          "Log(file='<REMOVED_FOR_TESTING>', format='json', level='DEBUG')",
+        ],
+        'verbose': 1,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logfiles': <class 'list'> [
+        '<REMOVED_FOR_TESTING>',
+      ],
+      'logger': '_core',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+  ]
+---
+# name: test_init_logging__LOGFILE[2]
+  '
+  2021-09-06T15:45:03.585481Z [info     ] Logging to files.              [_core] fargs={'logs': [Log(file='stderr', format='nocolor', level='INFO'), Log(file='<REMOVED_FOR_TESTING>', format='json', level='DEBUG')], 'verbose': 2} function=fake_function lineno=123 logfiles=['<REMOVED_FOR_TESTING>'] module=fake_module pid=12345 thread=MainThread
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [std_test] function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [std_test] function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  
+  '
+---
+# name: test_init_logging__LOGFILE[2].1
+  '
+  {"event": "Logging to files.", "fargs": {"logs": ["Log(file='stderr', format='nocolor', level='INFO')", "Log(file='<REMOVED_FOR_TESTING>', format='json', level='DEBUG')"], "verbose": 2}, "function": "fake_function", "level": "info", "lineno": "123", "logfiles": ["<REMOVED_FOR_TESTING>"], "logger": "_core", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"event": "Hi there", "function": "fake_function", "level": "debug", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"event": "Hi there", "function": "fake_function", "level": "info", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"event": "Hi there", "function": "fake_function", "level": "error", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  
+  '
+---
+# name: test_init_logging__LOGFILE[2].2
+  <class 'list'> [
+    <class 'dict'> {
+      'event': 'Logging to files.',
+      'fargs': <class 'dict'> {
+        'logs': <class 'list'> [
+          "Log(file='stderr', format='nocolor', level='INFO')",
+          "Log(file='<REMOVED_FOR_TESTING>', format='json', level='DEBUG')",
+        ],
+        'verbose': 2,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logfiles': <class 'list'> [
+        '<REMOVED_FOR_TESTING>',
+      ],
+      'logger': '_core',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+  ]
+---
+# name: test_init_logging__LOGFILE[3]
+  '
+  2021-09-06T15:45:03.585481Z [info     ] Logging to files.              [_core] fargs={'logs': [Log(file='stderr', format='nocolor', level='INFO'), Log(file='<REMOVED_FOR_TESTING>', format='json', level='DEBUG')], 'verbose': 3} function=fake_function lineno=123 logfiles=['<REMOVED_FOR_TESTING>'] module=fake_module pid=12345 thread=MainThread
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [std_test] function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [std_test] function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  
+  '
+---
+# name: test_init_logging__LOGFILE[3].1
+  '
+  {"event": "Logging to files.", "fargs": {"logs": ["Log(file='stderr', format='nocolor', level='INFO')", "Log(file='<REMOVED_FOR_TESTING>', format='json', level='DEBUG')"], "verbose": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logfiles": ["<REMOVED_FOR_TESTING>"], "logger": "_core", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_1", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_2", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "debug", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "info", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"e": 2, "event": "Hi there", "fargs": {"a": 1, "b": 2, "c": 3}, "function": "fake_function", "level": "error", "lineno": "123", "logger": "struct_test_3", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z", "z": 3}
+  {"event": "Hi there", "function": "fake_function", "level": "debug", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"event": "Hi there", "function": "fake_function", "level": "info", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  {"event": "Hi there", "function": "fake_function", "level": "error", "lineno": "123", "logger": "std_test", "module": "fake_module", "pid": 12345, "thread": "MainThread", "timestamp": "2021-09-06T15:45:03.585481Z"}
+  
+  '
+---
+# name: test_init_logging__LOGFILE[3].2
+  <class 'list'> [
+    <class 'dict'> {
+      'event': 'Logging to files.',
+      'fargs': <class 'dict'> {
+        'logs': <class 'list'> [
+          "Log(file='stderr', format='nocolor', level='INFO')",
+          "Log(file='<REMOVED_FOR_TESTING>', format='json', level='DEBUG')",
+        ],
+        'verbose': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logfiles': <class 'list'> [
+        '<REMOVED_FOR_TESTING>',
+      ],
+      'logger': '_core',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_1',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_2',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'e': 2,
+      'event': 'Hi there',
+      'fargs': <class 'dict'> {
+        'a': 1,
+        'b': 2,
+        'c': 3,
+      },
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'struct_test_3',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+      'z': 3,
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'debug',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'info',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+    <class 'dict'> {
+      'event': 'Hi there',
+      'function': 'fake_function',
+      'level': 'error',
+      'lineno': '123',
+      'logger': 'std_test',
+      'module': 'fake_module',
+      'pid': 12345,
+      'thread': 'MainThread',
+      'timestamp': '2021-09-06T15:45:03.585481Z',
+    },
+  ]
+---
+# name: test_init_logging__NO_LOGFILE[0]
+  '
+  15:45:03.585 [info     ] Hi there                       [struct_test_1] e=2 z=3
+  15:45:03.585 [error    ] Hi there                       [struct_test_1] e=2 z=3
+  15:45:03.585 [info     ] Hi there                       [struct_test_2] e=2 z=3
+  15:45:03.585 [error    ] Hi there                       [struct_test_2] e=2 z=3
+  15:45:03.585 [info     ] Hi there                       [struct_test_3] e=2 z=3
+  15:45:03.585 [error    ] Hi there                       [struct_test_3] e=2 z=3
+  15:45:03.585 [info     ] Hi there                       [std_test] 
+  15:45:03.585 [error    ] Hi there                       [std_test] 
+  
+  '
+---
+# name: test_init_logging__NO_LOGFILE[1]
+  '
+  15:45:03.585481 [debug    ] Hi there                       [struct_test_1] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [info     ] Hi there                       [struct_test_1] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [error    ] Hi there                       [struct_test_1] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [debug    ] Hi there                       [struct_test_2] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [info     ] Hi there                       [struct_test_2] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [error    ] Hi there                       [struct_test_2] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [debug    ] Hi there                       [struct_test_3] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [info     ] Hi there                       [struct_test_3] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [error    ] Hi there                       [struct_test_3] e=2 pid=12345 thread=MainThread z=3
+  15:45:03.585481 [debug    ] Hi there                       [std_test] pid=12345 thread=MainThread
+  15:45:03.585481 [info     ] Hi there                       [std_test] pid=12345 thread=MainThread
+  15:45:03.585481 [error    ] Hi there                       [std_test] pid=12345 thread=MainThread
+  
+  '
+---
+# name: test_init_logging__NO_LOGFILE[2]
+  '
+  2021-09-06T15:45:03.585481Z [debug    ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [debug    ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [debug    ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [debug    ] Hi there                       [std_test] function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [std_test] function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [std_test] function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  
+  '
+---
+# name: test_init_logging__NO_LOGFILE[3]
+  '
+  2021-09-06T15:45:03.585481Z [trace    ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [debug    ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_1] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [trace    ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [debug    ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_2] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [trace    ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [debug    ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [struct_test_3] e=2 fargs={'a': 1, 'b': 2, 'c': 3} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread z=3
+  2021-09-06T15:45:03.585481Z [debug    ] Hi there                       [std_test] function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  2021-09-06T15:45:03.585481Z [info     ] Hi there                       [std_test] function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  2021-09-06T15:45:03.585481Z [error    ] Hi there                       [std_test] function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  
+  '
+---
+# name: test_log_before_init
+  '
+  [2m15:45:03.585[0m [[32m[1minfo     [0m] [1mHi there                      [0m [[34m[1mstruct_test_1[0m] [36me[0m=[35m2[0m [36mz[0m=[35m3[0m
+  [2m15:45:03.585[0m [[31m[1merror    [0m] [1mHi there                      [0m [[34m[1mstruct_test_1[0m] [36me[0m=[35m2[0m [36mz[0m=[35m3[0m
+  [2m15:45:03.585[0m [[32m[1minfo     [0m] [1mHi there                      [0m [[34m[1mstruct_test_2[0m] [36me[0m=[35m2[0m [36mz[0m=[35m3[0m
+  [2m15:45:03.585[0m [[31m[1merror    [0m] [1mHi there                      [0m [[34m[1mstruct_test_2[0m] [36me[0m=[35m2[0m [36mz[0m=[35m3[0m
+  [2m15:45:03.585[0m [[32m[1minfo     [0m] [1mHi there                      [0m [[34m[1mstruct_test_3[0m] [36me[0m=[35m2[0m [36mz[0m=[35m3[0m
+  [2m15:45:03.585[0m [[31m[1merror    [0m] [1mHi there                      [0m [[34m[1mstruct_test_3[0m] [36me[0m=[35m2[0m [36mz[0m=[35m3[0m
+  [2m15:45:03.585[0m [[32m[1minfo     [0m] [1mHi there                      [0m [[34m[1mstd_test[0m] 
+  [2m15:45:03.585[0m [[31m[1merror    [0m] [1mHi there                      [0m [[34m[1mstd_test[0m] 
+  
+  '
+---
+# name: test_restricted_keys
+  '
+  2021-09-06T15:45:03.585481Z [warning  ] Restricted key cannot be bound. [_core] bad_key=pid fargs={'self': <BetterBoundLogger(context={}, processors=[<function add_logger_name>, <structlog.stdlib.PositionalArgumentsFormatter object>, <structlog.processors.StackInfoRenderer object>, <function format_exc_info>, <structlog.processors.UnicodeDecoder object>, <function ProcessorFormatter.wrap_for_formatter>])>, 'new_values': {'pid': 12345, 'good_key': "'Only this key should bind to the logger.'"}, '__class__': <class 'logrus._core.BetterBoundLogger'>} function=fake_function lineno=123 module=fake_module pid=12345 thread=MainThread
+  2021-09-06T15:45:03.585481Z [info     ] Test INFO log message.         [restricted_keys] function=fake_function good_key='Only this key should bind to the logger.' lineno=123 module=fake_module pid=12345 thread=MainThread
+  
+  '
+---

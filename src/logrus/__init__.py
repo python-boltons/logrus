@@ -6,10 +6,26 @@ module.
 
 import logging as _logging
 
-from ._core import dummy
+from ._core import (
+    BetterBoundLogger,
+    Log,
+    LogFormat,
+    Logger,
+    LogLevel,
+    get_default_logfile,
+    init_logging,
+)
 
 
-__all__ = ["dummy"]
+__all__ = [
+    "BetterBoundLogger",
+    "Log",
+    "LogFormat",
+    "Logger",
+    "LogLevel",
+    "get_default_logfile",
+    "init_logging",
+]
 
 __author__ = "Bryan M Bugyi"
 __email__ = "bryanbugyi34@gmail.com"
