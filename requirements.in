@@ -1,2 +1,2 @@
 bolton-metaman ~= 0.1.1
-structlog < 23
+structlog

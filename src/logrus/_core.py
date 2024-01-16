@@ -371,8 +371,8 @@ def init_logging(
     # https://github.com/hynek/structlog/issues/47
     # https://stackoverflow.com/questions/54505487/custom-log-level-not-working-with-structlog/56467981#56467981
     setattr(structlog.stdlib, "TRACE", _TRACE_LEVEL)
-    structlog.stdlib._NAME_TO_LEVEL["trace"] = _TRACE_LEVEL
-    structlog.stdlib._LEVEL_TO_NAME[_TRACE_LEVEL] = "trace"
+    structlog.stdlib.NAME_TO_LEVEL["trace"] = _TRACE_LEVEL
+    structlog.stdlib.LEVEL_TO_NAME[_TRACE_LEVEL] = "trace"
     logging.addLevelName(_TRACE_LEVEL, "TRACE")
     setattr(logging.Logger, "trace", BetterBoundLogger.trace)
 

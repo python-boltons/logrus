@@ -9,9 +9,13 @@ The format is based on [Keep a Changelog], and this project adheres to
 [Semantic Versioning]: https://semver.org/
 
 
-## [Unreleased](https://github.com/python-boltons/logrus/compare/0.1.1...HEAD)
+## [Unreleased](https://github.com/python-boltons/logrus/compare/0.1.2...HEAD)
 
 No notable changes have been made.
+
+## [0.1.2](https://github.com/python-boltons/logrus/compare/0.1.1...0.1.2) - 2024-01-15
+
+* Fix structlog>=23 crash and remove version constraint.
 
 ## [0.1.1](https://github.com/python-boltons/logrus/compare/0.1.0...0.1.1) - 2024-01-15
 
