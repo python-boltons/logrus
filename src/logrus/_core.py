@@ -561,9 +561,6 @@ def _add_caller_info_processor(
         additional_ignores=additional_ignores
     )
 
-    if not frame:
-        return event_dict
-
     frameinfo = getframeinfo(frame)
 
     if not frameinfo:
