@@ -21,7 +21,9 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          python -m pip install -U pip docker-compose
+          pip install "Cython<3"
+          pip install pyyaml==5.4.1 --no-cache-dir --no-build-isolation
+          pip install docker-compose
 
       - name: Unit tests
         run: |
