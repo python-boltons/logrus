@@ -4,7 +4,7 @@
 #
 #    "make update-requirements"
 #
-bolton-metaman==0.1.1
+bolton-metaman==0.1.2
     # via -r requirements.in
-structlog==21.5.0
+structlog==24.1.0
     # via -r requirements.in
