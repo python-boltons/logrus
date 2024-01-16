@@ -5,7 +5,7 @@
 MAKEFLAGS += --warn-undefined-variables
 SHELL := /bin/bash
 
-DOCKER_CMD := USER_ID=$(shell id -u) GROUP_ID=$(shell id -g) docker-compose run --rm python-boltons.logrus
+DOCKER_CMD := USER_ID=$(shell id -u) GROUP_ID=$(shell id -g) docker compose run --rm python-boltons.logrus
 MAKE_CMD := make -f targets.mk
 USE_DOCKER_FILE := .lcldev/use-docker
 
