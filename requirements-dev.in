@@ -13,7 +13,7 @@ black
 cogapp ~= 3.3
 flake8
 isort
-mypy != 0.920, != 0.921, != 0.930  # workaround for https://github.com/samuelcolvin/pydantic/pull/3175
+mypy
 pydocstyle[toml]
 pylint
 
@@ -21,7 +21,7 @@ pylint
 types-freezegun ~= 1.1
 
 ### Docs
-m2r2
+m2r2 != 0.3.3  # since this version requires docutils>=0.19 (see https://github.com/CrossNox/m2r2/compare/v0.3.2...v0.3.3)
 sphinx
 sphinx-rtd-theme
 sphinx-autodoc-typehints

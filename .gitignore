@@ -117,3 +117,9 @@ venv.bak/
 
 # git conflict files
 *.rej
+
+# pyright config file
+pyrightconfig.json
+
+# local sqlite databases
+*.db
